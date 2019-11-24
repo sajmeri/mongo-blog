@@ -5,11 +5,11 @@ const bodyParser = require('body-parser')
 const path = require('path');
 const app = express();
 
-module.exports = function(app, express, bodyParser, path) {
+module.exports = function(app, path) {
     app.use(proxy('/api/**', { target: 'http://localhost:8080' }));
     // app.use(proxy('/otherApi/**', { target: 'http://localhost:5000' }));
 
-    app.use(express.static(path.join(__dirname, 'build')));
+    app.use(app.static(path.join(__dirname, 'build')));
 
     app.get('/ping', function (req, res) {
         return res.send('pong');
