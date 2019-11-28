@@ -26,7 +26,7 @@ const app = express();
 require('./mongoConnect');
 app.use(express.static(path.join(__dirname, 'build')));
 
-require('./commentRoutes')(app);
+// require('./commentRoutes')(app);
 
 // app.get(`/api/product`, async (req, res) => {
 //   let products = await Product.find();
