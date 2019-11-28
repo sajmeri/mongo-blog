@@ -8,7 +8,7 @@ mongoose.promise = global.Promise;
 
 
 // mongoose.connect('mongodb://localhost:27017/react-blog',{
-mongoose.connect('mongodb+srv://admin:ca2000@react-blog-fibv0.mongodb.net/react-blog?retryWrites=true&w=majority',{
+mongoose.connect('mongodb://admin:ca2000@react-blog-fibv0.mongodb.net/test?retryWrites=true&w=majority',{
   useUnifiedTopology: true,
   useNewUrlParser: true,
   });
