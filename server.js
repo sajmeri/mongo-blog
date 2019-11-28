@@ -23,7 +23,7 @@ const app = express();
 // mongoose.model('comments', commentSchema);
 
 // const Comment = mongoose.model('comments');
-require('./mongoConect');
+require('./mongoConnect');
 app.use(express.static(path.join(__dirname, 'build')));
 
 require('./commentRoutes')(app);
