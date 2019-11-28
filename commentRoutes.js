@@ -9,7 +9,7 @@ module.exports = (app) => {
   // });
 
   app.get(`/api/product`, async (req, res) => {
-    let comment = await Comment.create({name:"Shahnaz",description:"Ajmeri"});
+    let comment = await Comment.create({name:"Shaukat",description:"Ajmeri"});
     return res.status(201).send({
       error: false,
       comment
