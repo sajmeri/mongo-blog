@@ -2,31 +2,28 @@ const express = require('express');
 const bodyParser = require('body-parser')
 const path = require('path');
 const app = express();
-// const mongoose = require('mongoose');
-// mongoose.promise = global.Promise;
-
-
-
+const mongoose = require('mongoose');
+mongoose.promise = global.Promise;
 // mongoose.connect('mongodb://localhost:27017/react-blog',{
-// mongoose.connect('mongodb+srv://admin:ca2000@react-blog-fibv0.mongodb.net/test?retryWrites=true&w=majority',{
-//   useUnifiedTopology: true,
-//   useNewUrlParser: true,
-//   });
-// mongoose.set('debug', true);
-// const {Schema} = mongoose;
+mongoose.connect('mongodb+srv://admin:ca2000@react-blog-fibv0.mongodb.net/test?retryWrites=true&w=majority',{
+  useUnifiedTopology: true,
+  useNewUrlParser: true,
+  });
+mongoose.set('debug', true);
+const {Schema} = mongoose;
 
-// const commentSchema = new Schema({
-//     name: String,
-//     description: String,
-// })
+const commentSchema = new Schema({
+    name: String,
+    description: String,
+})
 
-// mongoose.model('comments', commentSchema);
+mongoose.model('comments', commentSchema);
 
 // const Comment = mongoose.model('comments');
-require('./mongoConnect');
+// require('./mongoConnect');
 app.use(express.static(path.join(__dirname, 'build')));
 
-// require('./commentRoutes')(app);
+require('./commentRoutes')(app);
 
 // app.get(`/api/product`, async (req, res) => {
 //   let products = await Product.find();
