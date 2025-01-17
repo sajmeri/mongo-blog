@@ -9,7 +9,7 @@
     "http-proxy-middleware": "^0.20.0",
     "import-all.macro": "^2.0.3",
     "lodash": "^4.17.11",
-    "mongoose": "^5.7.12",
+    "mongoose": "^8.9.5",
     "navi": "^0.13.3",
     "navi-scripts": "^0.13.3",
     "netlify-cli": "^2.6.0",
